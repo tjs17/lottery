@@ -15,6 +15,12 @@
       // get user profile information
       console.log(googleUser.getBasicProfile())
     }
+    function signOut() {
+    gapi.auth2.getAuthInstance().signOut().then(function() {
+    console.log('user signed out')
+  })
+}
   </script>
+  <button onclick="signOut()">Sign out</button>
 </body>
 </html>
